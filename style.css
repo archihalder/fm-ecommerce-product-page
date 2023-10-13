@@ -14,6 +14,9 @@
   --grayish-blue-900: hsl(220, 13%, 13%);
   --black: hsl(0, 0%, 0%);
   --black-bg: hsla(0, 0%, 0%, 0.75);
+
+  /* opacity level */
+  --op: 50%;
 }
 
 * {
@@ -60,21 +63,31 @@ body {
 
 .nav-left img {
   height: 20px;
-  aspect-ratio: auto;
+  width: 138px;
   display: flex;
   align-items: center;
 }
 
 .nav-links {
+  position: absolute;
+  top: 2.5rem;
   display: flex;
   gap: 1.5rem;
   list-style: none;
+  height: 3.5rem;
 }
 
 .nav-links a {
+  display: block;
   color: var(--grayish-blue-500);
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
+  height: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--grayish-blue-900);
+  border-bottom: 3px solid var(--orange-400);
 }
 
 .cart-logo,
@@ -85,15 +98,20 @@ body {
 }
 
 .cart-logo img {
-  height: 1rem;
-  aspect-ratio: auto;
+  height: 20px;
+  width: 22px;
 }
 
 .profile-pic img {
   height: 3rem;
-  aspect-ratio: auto;
+  aspect-ratio: 1;
+  border: 2px solid var(--white);
 }
 
+.profile-pic img:hover {
+  border-radius: 50%;
+  border: 2px solid var(--orange-400);
+}
 /****************** hero section ********************/
 
 #hero {
@@ -111,12 +129,6 @@ body {
   gap: 1rem;
 }
 
-/* .display-image,
-.other-images {
-  display: flex;
-  justify-content: center;
-} */
-
 .display-image {
   display: flex;
   justify-content: center;
@@ -130,13 +142,30 @@ body {
 
 .other-images {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .other-images img {
   height: 5rem;
   aspect-ratio: 1;
   border-radius: 0.5rem;
+}
+
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--white);
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  border: 3px solid var(--orange-400);
+}
+
+.other-images img:hover {
+  opacity: var(--op);
 }
 
 /* product description */
@@ -223,10 +252,25 @@ h2 {
   margin: 0 auto;
 }
 
+.increase img {
+  height: 12px;
+  width: 12px;
+}
+
+.decrease img {
+  height: 4px;
+  width: 12px;
+}
+
 .increase,
 .decrease,
 .atc {
   cursor: pointer;
+}
+
+.increase:hover,
+.decrease:hover {
+  opacity: var(--op);
 }
 
 .value span {
@@ -241,6 +285,10 @@ h2 {
 .atc {
   gap: 1rem;
   background-color: var(--orange-400);
+}
+
+.atc:hover {
+  opacity: var(--op);
 }
 
 .atc span {
