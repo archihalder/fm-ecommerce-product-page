@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script defer src="script.js"></script>
   </head>
 
   <body>
@@ -38,8 +39,16 @@
           </div>
         </div>
         <div class="nav-right">
-          <div class="cart-logo">
-            <img src="/images/icon-cart.svg" alt="cart-logo" />
+          <div class="cart-status">
+            <div class="item-number"><span class="number-of-items">0</span></div>
+            <div class="cart-logo"><img src="/images/icon-cart.svg" alt="cart-logo" /></div>
+            <div class="cart-items">
+              <h3>Cart</h3>
+              <hr>
+              <div class="cart-content">
+                <span>Your cart is empty.</span>
+              </div>
+            </div>
           </div>
           <div class="profile-pic">
             <img src="/images/image-avatar.png" alt="profile picture" />
@@ -76,7 +85,7 @@
               <div class="decrease">
                 <img src="/images/icon-minus.svg" alt="minus logo" />
               </div>
-              <div class="value"><span>0</span></div>
+              <div class="value"><span class="number-of-items">0</span></div>
               <div class="increase">
                 <img src="/images/icon-plus.svg" alt="plus logo" />
               </div>

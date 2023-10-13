@@ -80,7 +80,7 @@ body {
 .nav-links a {
   display: block;
   color: var(--grayish-blue-500);
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   height: 100%;
 }
@@ -90,14 +90,76 @@ body {
   border-bottom: 3px solid var(--orange-400);
 }
 
-.cart-logo,
+.cart-status,
 .profile-pic {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.cart-logo img {
+.cart-status {
+  flex-direction: column;
+}
+
+.item-number,
+.cart-items {
+  position: absolute;
+  /* display: none; */
+}
+
+.item-number {
+  position: relative;
+  top: .5rem;
+  left: .5rem;
+}
+
+.item-number span {
+  padding: 0 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: var(--orange-400);
+  color: var(--white);
+}
+
+.cart-items {
+  height: 14rem;
+  width: 23rem;
+  top: 5rem;
+  border-radius: .8rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: 0 5px 15px 3px gray;
+}
+
+.cart-items h3 {
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.cart-items hr {
+  background-color: var(--grayish-blue-300);
+  height: 1px;
+  opacity: var(--op);
+  border: none;
+}
+
+.cart-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content span {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--grayish-blue-500);
+}
+
+.cart-logo img { /* make it black */
   height: 20px;
   width: 22px;
 }
@@ -160,9 +222,9 @@ body {
   cursor: pointer;
 }
 
-.thumbnail:hover {
+/* .thumbnail:hover {
   border: 3px solid var(--orange-400);
-}
+} */
 
 .other-images img:hover {
   opacity: var(--op);
@@ -176,7 +238,7 @@ body {
   justify-content: center;
 }
 
-h1 {
+.product-description h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px;
@@ -185,7 +247,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
-h2 {
+.product-description h2 {
   font-size: 45px;
   color: var(--grayish-blue-900);
   font-weight: 700;
@@ -194,7 +256,7 @@ h2 {
 .product-description p {
   color: var(--grayish-blue-500);
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 1rem;
   margin: 1.5rem 0;
 }
 
