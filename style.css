@@ -104,17 +104,21 @@ body {
 .item-number,
 .cart-items {
   position: absolute;
-  /* display: none; */
 }
 
 .item-number {
   position: relative;
-  top: .5rem;
-  left: .5rem;
+  top: 8px;
+  left: 10px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-number span {
-  padding: 0 8px;
+  text-align: center;
+  width: 100%;
   border-radius: 8px;
   font-size: 12px;
   font-weight: 700;
