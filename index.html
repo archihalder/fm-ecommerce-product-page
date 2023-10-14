@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Shop the latest collection from sneakers">
+    <meta
+      name="description"
+      content="Shop the latest collection from sneakers"
+    />
     <title>Sneakers</title>
     <link
       rel="icon"
@@ -40,13 +43,43 @@
         </div>
         <div class="nav-right">
           <div class="cart-status">
-            <div class="item-number"><span class="number-of-items">0</span></div>
-            <div class="cart-logo"><img src="/images/icon-cart.svg" alt="cart-logo" /></div>
+            <div class="item-number">
+              <span class="number-of-items">0</span>
+            </div>
+            <div class="cart-logo">
+              <img src="/images/icon-cart.svg" alt="cart-logo" />
+            </div>
             <div class="cart-items">
               <h3>Cart</h3>
-              <hr>
+              <hr />
               <div class="cart-content">
-                <span>Your cart is empty.</span>
+                <div class="empty"><span>Your cart is empty.</span></div>
+                <div class="not-empty">
+                  <div class="cart-details">
+                    <img
+                      class="selected-product"
+                      src="/images/image-product-1-thumbnail.jpg"
+                      alt="product 1 thumbnail"
+                    />
+                    <div class="cart-details__text">
+                      <p>Fall Limited Edition Sneakers</p>
+                      <p>
+                        $125.00 x <span class="number-of-items">0</span> =
+                        <span class="total"
+                          >$<span class="total-value">0</span></span
+                        >
+                      </p>
+                    </div>
+                    <div class="delete">
+                      <img
+                        class="delete-icon"
+                        src="/images/icon-delete.svg"
+                        alt="delete icon"
+                      />
+                    </div>
+                  </div>
+                  <button class="checkout">Checkout</button>
+                </div>
               </div>
             </div>
           </div>
@@ -58,13 +91,33 @@
       <div id="hero">
         <div class="product-catalogue">
           <div class="display-image">
-            <img src="/images/image-product-1.jpg" alt="product 1">
+            <img src="/images/image-product-1.jpg" alt="product 1" />
           </div>
           <div class="other-images">
-            <div id="p1" class="thumbnail"><img src="/images/image-product-1-thumbnail.jpg" alt="product 1 thumbnail"></div>
-            <div id="p2" class="thumbnail"><img src="/images/image-product-2-thumbnail.jpg" alt="product 2 thumbnail"></div>
-            <div id="p3" class="thumbnail"><img src="/images/image-product-3-thumbnail.jpg" alt="product 3 thumbnail"></div>
-            <div id="p4" class="thumbnail"><img src="/images/image-product-4-thumbnail.jpg" alt="product 4 thumbnail"></div>
+            <div id="p1" class="thumbnail">
+              <img
+                src="/images/image-product-1-thumbnail.jpg"
+                alt="product 1 thumbnail"
+              />
+            </div>
+            <div id="p2" class="thumbnail">
+              <img
+                src="/images/image-product-2-thumbnail.jpg"
+                alt="product 2 thumbnail"
+              />
+            </div>
+            <div id="p3" class="thumbnail">
+              <img
+                src="/images/image-product-3-thumbnail.jpg"
+                alt="product 3 thumbnail"
+              />
+            </div>
+            <div id="p4" class="thumbnail">
+              <img
+                src="/images/image-product-4-thumbnail.jpg"
+                alt="product 4 thumbnail"
+              />
+            </div>
           </div>
         </div>
         <div class="product-description">
