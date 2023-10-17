@@ -238,6 +238,7 @@ body {
   border-radius: 50%;
   border: 2px solid var(--orange-400);
 }
+
 /****************** hero section ********************/
 
 #hero {
@@ -286,11 +287,12 @@ body {
   cursor: pointer;
 }
 
-/* .thumbnail:hover {
-  border: 3px solid var(--orange-400);
-} */
-
 .other-images img:hover {
+  opacity: var(--op);
+}
+
+.selected {
+  border: 3px solid var(--orange-400);
   opacity: var(--op);
 }
 

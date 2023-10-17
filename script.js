@@ -87,6 +87,7 @@ function decrease() {
 function updateValue() {
   var totalProduct = (value * 125.0).toFixed(2);
   var t = value.toString();
+
   totalValue.innerHTML = totalProduct.toString();
   numOfItems.forEach((i) => {
     i.innerHTML = t;
@@ -109,3 +110,34 @@ deleteBtn.addEventListener("click", resetCart);
 
 // total value in the cart
 var totalValue = document.querySelector(".total-value");
+
+/*
+select display image by clicking the thumbnails
+opacity and border changes on the thumbnails
+*/
+var thumbnails = document.querySelectorAll(".thumbnail");
+var displayImg = document.querySelector(".display-image");
+
+thumbnails.forEach((i) => {
+  i.addEventListener(
+    "click",
+    () => {
+      var selectedElement = document.querySelector(".selected");
+      if (selectedElement) {
+        selectedElement.classList.remove("selected");
+      }
+      i.classList.add("selected");
+      var sid = i.id[1];
+      displayImg.innerHTML =
+        "<img src='/images/image-product-" +
+        sid +
+        ".jpg' alt='product " +
+        sid +
+        "'></img>";
+    },
+    false
+  );
+});
+
+// initially the first selected image
+thumbnails[0].classList.add("selected");
