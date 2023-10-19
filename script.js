@@ -9,6 +9,7 @@ var isCartOpen = false;
 var empty = document.querySelector(".empty");
 var nonEmpty = document.querySelector(".not-empty");
 
+// did you click the cart?
 function clicked() {
   isCartOpen = !isCartOpen;
   updateVisibility();
@@ -123,17 +124,17 @@ thumbnails.forEach((i) => {
     "click",
     () => {
       var selectedElement = document.querySelector(".selected");
+      var selectedImage = selectedElement.querySelector("img");
+
       if (selectedElement) {
         selectedElement.classList.remove("selected");
+        selectedImage.classList.remove("selected-image");
       }
       i.classList.add("selected");
+      i.querySelector("img").classList.add("selected-image");
+
       var sid = i.id[1];
-      displayImg.innerHTML =
-        "<img src='/images/image-product-" +
-        sid +
-        ".jpg' alt='product " +
-        sid +
-        "'></img>";
+      displayImg.innerHTML = "<img src='/images/image-product-" + sid + ".jpg' alt='product " + sid + "'/>";
     },
     false
   );
@@ -141,3 +142,17 @@ thumbnails.forEach((i) => {
 
 // initially the first selected image
 thumbnails[0].classList.add("selected");
+thumbnails[0].querySelector("img").classList.add("selected-image");
+
+/**************************************************************************************************** */
+
+// hamburger menu
+var hbMenu = document.querySelector(".hamburger-menu");
+var navLinks = document.querySelector(".nav-links");
+hbMenu.addEventListener('click', () => {
+  navLinks.style.display = "flex";
+});
+var closeMenu = document.querySelector(".nav-links img");
+closeMenu.addEventListener('click', () => {
+  navLinks.style.display = "none";
+});
