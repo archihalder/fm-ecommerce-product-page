@@ -510,7 +510,7 @@ body {
     top: 0;
     gap: 1rem;
     background-color: #fff;
-    height: 100svh;
+    min-height: -webkit-fill-available;
     width: 60%;
     padding: 2rem;
     z-index: 5;
