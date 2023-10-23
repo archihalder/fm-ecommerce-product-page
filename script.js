@@ -195,10 +195,15 @@ click on the cross symbol to close the side menu
 */
 var hbMenu = document.querySelector(".hamburger-menu");     // set of three bars of hamburger menu
 var navLinks = document.querySelector(".nav-links");        // set of navbar links
+var grayArea = document.querySelector(".gray-area");
+
 hbMenu.addEventListener('click', () => {
     navLinks.style.display = "flex";
+    grayArea.style.display = "flex";
 });
+
 var closeMenu = document.querySelector(".nav-links img");   // cross symbol
 closeMenu.addEventListener('click', () => {
     navLinks.style.display = "none";
+    grayArea.style.display = "none";
 });

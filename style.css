@@ -98,6 +98,10 @@ body {
   border-bottom: 4px solid var(--orange-400);
 }
 
+.gray-area {
+  display: none;
+}
+
 .cart-status,
 .profile-pic {
   display: flex;
@@ -513,6 +517,16 @@ body {
     min-height: -webkit-fill-available;
     width: 60%;
     padding: 2rem;
+    z-index: 5;
+  }
+
+  .gray-area {
+    position: fixed;
+    min-height: -webkit-fill-available;
+    background-color: var(--black-bg);
+    width: 40%;
+    right: 0;
+    top: 0;
     z-index: 5;
   }
 
